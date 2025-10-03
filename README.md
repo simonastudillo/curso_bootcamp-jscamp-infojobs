@@ -53,3 +53,6 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 - [¿Qué tienes que instalar?](./informacion/modulo_01/class_06.md)
 - [Extensión y Terminal recomendada](./informacion/modulo_01/class_07.md)
 - [Acceso al código del proyecto](./informacion/modulo_01/class_08.md)
+
+### Modulo 2: HTML y CSS
+- [¿Qué es HTML?](./informacion/modulo_02/class_01.md)
