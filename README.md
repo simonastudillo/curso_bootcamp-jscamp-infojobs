@@ -57,3 +57,4 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 ### Modulo 2: HTML y CSS
 - [¿Qué es HTML?](./informacion/modulo_02/class_01.md)
 - [La Estructura Básica](./informacion/modulo_02/class_02.md)
+- [La etiqueta body y más](./informacion/modulo_02/class_03.md)
