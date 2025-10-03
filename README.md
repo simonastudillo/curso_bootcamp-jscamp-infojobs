@@ -26,6 +26,7 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 2. Cuenta de GitHub
 3. Visual studio code
 4. GitHub copilot
+5. Warp (opcional)
 
 ## Extensiones recomendadas para Visual Studio Code
 
@@ -35,6 +36,20 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 ## Referencias
 
 - [Clases grabadas del bootcamp](https://www.jscamp.dev)
-- [Stitch del proyecto](https://stitch.withgoogle.com/projects/7508115667617706440) 
+- [Stitch del proyecto](https://stitch.withgoogle.com/projects/7508115667617706440)
+- [Repositorio del proyecto](https://github.com/midudev/jscamp)
+
 - [Documentación HTML](https://developer.mozilla.org/es/docs/Web/HTML)
 - [Documentación CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+
+## Información clases
+
+### Modulo 1: Introducción al Bootcamp
+- [¿Por qué aprender programación?](./informacion/modulo_01/class_01.md)
+- [Programación FullStack: Frontend, Backend y APIs](./informacion/modulo_01/class_02.md)
+- [Presentación del proyecto](./informacion/modulo_01/class_03.md)
+- [Diseñando nuestro proyecto](./informacion/modulo_01/class_04.md)
+- [Requisitos para el Bootcamp](./informacion/modulo_01/class_05.md)
+- [¿Qué tienes que instalar?](./informacion/modulo_01/class_06.md)
+- [Extensión y Terminal recomendada](./informacion/modulo_01/class_07.md)
+- [Acceso al código del proyecto](./informacion/modulo_01/class_08.md)
