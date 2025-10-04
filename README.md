@@ -53,3 +53,17 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 - [¿Qué tienes que instalar?](./informacion/modulo_01/class_06.md)
 - [Extensión y Terminal recomendada](./informacion/modulo_01/class_07.md)
 - [Acceso al código del proyecto](./informacion/modulo_01/class_08.md)
+
+### Modulo 2: HTML y CSS
+- [¿Qué es HTML?](./informacion/modulo_02/class_01.md)
+- [La Estructura Básica](./informacion/modulo_02/class_02.md)
+- [La etiqueta body y más](./informacion/modulo_02/class_03.md)
+- [La etiqueta main, section y img](./informacion/modulo_02/class_04.md)
+- [Formularios](./informacion/modulo_02/class_05.md)
+- [Article y footer](./informacion/modulo_02/class_06.md)
+- [Curso completo de HTML](./informacion/modulo_02/class_07.md)
+- [¿Qué es CSS?](./informacion/modulo_02/class_08.md)
+- [Escribiendo nuestro primer CSS](./informacion/modulo_02/class_09.md)
+- [Selectores CSS](./informacion/modulo_02/class_10.md)
+- [Responsive Design](./informacion/modulo_02/class_11.md)
+- [Ejercicios y cursos HTML/CSS](./informacion/modulo_02/class_12.md)
