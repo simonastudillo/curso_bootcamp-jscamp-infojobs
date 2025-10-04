@@ -62,3 +62,4 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 - [Formularios](./informacion/modulo_02/class_05.md)
 - [Article y footer](./informacion/modulo_02/class_06.md)
 - [Curso completo de HTML](./informacion/modulo_02/class_07.md)
+- [¿Qué es CSS?](./informacion/modulo_02/class_08.md)
