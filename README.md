@@ -64,3 +64,4 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 - [Curso completo de HTML](./informacion/modulo_02/class_07.md)
 - [¿Qué es CSS?](./informacion/modulo_02/class_08.md)
 - [Escribiendo nuestro primer CSS](./informacion/modulo_02/class_09.md)
+- [Selectores CSS](./informacion/modulo_02/class_10.md)
