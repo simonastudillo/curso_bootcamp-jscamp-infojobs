@@ -59,3 +59,4 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 - [La Estructura Básica](./informacion/modulo_02/class_02.md)
 - [La etiqueta body y más](./informacion/modulo_02/class_03.md)
 - [La etiqueta main, section y img](./informacion/modulo_02/class_04.md)
+- [Formularios](./informacion/modulo_02/class_05.md)
