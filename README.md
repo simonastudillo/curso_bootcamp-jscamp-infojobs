@@ -61,3 +61,4 @@ El diseño se generó con [stitch](https://stitch.withgoogle.com) solo visualmen
 - [La etiqueta main, section y img](./informacion/modulo_02/class_04.md)
 - [Formularios](./informacion/modulo_02/class_05.md)
 - [Article y footer](./informacion/modulo_02/class_06.md)
+- [Curso completo de HTML](./informacion/modulo_02/class_07.md)
