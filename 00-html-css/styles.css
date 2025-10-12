@@ -395,6 +395,11 @@ article {
       }
    }
 }
-#boton-importante {
+.button-apply-job {
    background: #09f;
+
+   &.is-applied {
+      background: #4caf50;
+      cursor: not-allowed;
+   }
 }

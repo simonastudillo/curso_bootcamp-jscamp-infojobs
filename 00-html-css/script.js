@@ -1,5 +1,23 @@
 
-const boton = document.getElementById('boton-importante');
-boton.addEventListener('click', () => {
-   alert('¡Gracias por tu interés! Pronto nos pondremos en contacto contigo.');
+// const boton = document.querySelector('.button-apply-job');
+
+// if ( boton !== null) {
+   // boton.addEventListener('click', () => {
+   //    boton.textContent = '¡Aplicado!';
+   //    boton.classList.add('is-applied');
+   //    boton.disabled = true;
+   // });
+// }
+
+
+const botones = document.querySelectorAll('.button-apply-job');
+
+botones.forEach( boton => {
+
+   boton.addEventListener('click', () => {
+      boton.textContent = '¡Aplicado!';
+      boton.classList.add('is-applied');
+      boton.disabled = true;
+   });
+
 });
