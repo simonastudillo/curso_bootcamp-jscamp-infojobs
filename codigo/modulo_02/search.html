@@ -1,0 +1,129 @@
+<!DOCTYPE html> <!-- le indica al navegador que es un documento HTML5 -->
+<html lang="es">
+
+<head>
+   <!-- Van los metadatos, esta información no es visible en la web -->
+   <title>DevJobs - Inicio</title>
+   <meta charset="UTF-8" /><!-- Define la codificación de caracteres -->
+   <meta name="description" content="Encuentra el trabajo de tus sueños">
+   <link rel="stylesheet" href="./search.css" /><!-- Vincula el archivo CSS externo -->
+</head>
+
+<body>
+   <header class="header-search">
+      <nav>
+         <a href="./index.html">
+            <h2>
+               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                 <polyline points="16 18 22 12 16 6"></polyline>
+                 <polyline points="8 6 2 12 8 18"></polyline>
+               </svg>
+               DevJobs
+            </h2>
+         </a>
+         <a href="">Inicios</a>
+         <a href="./search.html">Empleos</a>
+         <a href="">Empresas</a>
+         <a href="">Salarios</a>
+      </nav>
+      <div>
+         <button href="">Subir CV</button>
+         <a href="">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeG7G_fClYlNDdKTzEHA670Uh9TsfTwHCNng2nJOHZCsw_jzXKbuYg-ldPUGFyi06-RD8U4HtIew9rpl5T8KZpJLMfjHDm4EzNUz8rmjZK31QJTHhMqTY3_Kb8A2X_2zq_sDsq_v05AiSRHLlDPcyX1NmEoPCfW01ygMJcjz3gb0lUUZO_9qQq67stmy6-p1WbZReGs7T6RvlsxS_vN6KZi9UyUHJ80dTs-NADdsMxt3pXS8dF07JN11dXZAZp-UdqyFt7glf9jmA" alt="Imagen de perfil del usuario">
+         </a>
+      </div>
+   </header>
+   <main class="main-search">
+      <section>
+         <h1>Encuentra tu próximo trabajo</h1>
+         <p>Explora miles de oportunidades en el sector tecnológico.</p>
+      </section>
+      <section>
+         <form role="search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+               class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+               <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+               <path d="M21 21l-6 -6" />
+            </svg>
+            <input type="text" placeholder="Buscar trabajos empleos o habilidades" />
+            <select name="tipo" id="tipo">
+               <option value="">Tecnología</option>
+            </select>
+            <select name="ubicacion" id="ubicacion">
+               <option value="">Ubicación</option>
+            </select>
+            <select name="tipoContrato" id="tipoContrato">
+               <option value="">Tipo de contrato</option>
+            </select>
+            <select name="level" id="level">
+               <option value="">Nivel de experiencia</option>
+            </select>
+         </form>
+      </section>
+      <section class="search-results">
+         <header>
+            <h2>Resultados de búsqueda</h2>
+         </header>
+         <article>
+            <header>
+               <h3>
+                  Ingeniero de Software
+                  <p>Tech Solutions inc. | Remoto</p>
+               </h3>
+               <button>Aplicar</button>
+            </header>
+            <p>Buscamos un ingeniero de software con experiencia en desarrollo web y conocimiento en JavaScript, React y
+               Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de
+               comunicación.</p>
+         </article>
+         <article>
+            <header>
+               <h3>
+                  Analista de datos
+                  <p>Data Driven Co. | Ciudad de México</p>
+               </h3>
+               <button>Aplicar</button>
+            </header>
+            <p>Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y
+               herramientas de visualización. Se requiere conocimiento en SQL, Python y R.</p>
+         </article>
+         <article>
+            <header>
+               <h3>
+                  Desarrollador de Aplicaciones Móviles
+                  <p>Mobile Apps Ltd. | Guadalajara</p>
+               </h3>
+               <button>Aplicar</button>
+            </header>
+            <p>Buscamos un desarrollador de aplicaciones móviles con experiencia en Ios y/o Android. El candidato
+               debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.</p>
+         </article>
+         <article>
+            <header>
+               <h3>
+                  Ingeniero de DevOps
+                  <p>Cloud Services SA. | Remoto</p>
+               </h3>
+               <button>Aplicar</button>
+            </header>
+            <p>Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructura en la nube,
+               automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure
+               o GCP.</p>
+         </article>
+
+         <footer>
+            <button> < </button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button> > </button>
+         </footer>
+      </section>
+   </main>
+</body>
+
+</html>
