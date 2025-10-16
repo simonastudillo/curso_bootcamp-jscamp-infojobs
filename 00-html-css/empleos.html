@@ -42,11 +42,11 @@
                   <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                   <path d="M21 21l-6 -6" />
                </svg>
-               <input type="text" placeholder="Buscar trabajos empleos o habilidades" />
+               <input id="empleos-search-input" type="text" placeholder="Buscar trabajos empleos o habilidades" />
             </div>
 
             <div class="search-filters">
-               <select name="technology" id="technology">
+               <select name="technology" id="filter-technology">
                   <option value="">Tecnología</option>
                   <option value="JavaScript">JavaScript</option>
                   <option value="Python">Python</option>
@@ -75,6 +75,8 @@
                   <option value="lead">Lead</option>
                </select>
             </div>
+
+            <span id="filter-selected-value"></span>
          </form>
       </section>
       <h2>Resultados de búsqueda</h2>

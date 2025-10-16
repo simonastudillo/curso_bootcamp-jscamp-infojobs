@@ -33,3 +33,16 @@ jobsListingSection?.addEventListener('click', (event) => {
       element.disabled = true;
    }
 });
+
+const filter = document.querySelector('#filter-technology');
+const mensaje = document.querySelector('#filter-selected-value');
+
+filter?.addEventListener('change', () => {
+   const selectedValue = filter.value;
+
+   if  ( selectedValue ) {
+      mensaje.textContent = `Filtrando por tecnología: ${selectedValue}`;
+   } else {
+      mensaje.textContent = '';
+   }
+});
