@@ -33,7 +33,7 @@
          <h1>Encuentra tu próximo trabajo</h1>
          <p>Explora miles de oportunidades en el sector tecnológico.</p>
 
-         <form role="search">
+         <form role="search" id="empleos-search-form">
             <div class="search-bar">
                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
@@ -42,7 +42,7 @@
                   <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                   <path d="M21 21l-6 -6" />
                </svg>
-               <input id="empleos-search-input" type="text" placeholder="Buscar trabajos empleos o habilidades" />
+               <input name="empleos-search-input" id="empleos-search-input" type="text" placeholder="Buscar trabajos empleos o habilidades" />
             </div>
 
             <div class="search-filters">
@@ -53,21 +53,21 @@
                   <option value="Java">Java</option>
                   <option value="React">React</option>
                </select>
-               <select name="location" id="location">
+               <select name="location" id="filter-location">
                   <option value="">Ubicación</option>
                   <option value="remoto">Remoto</option>
                   <option value="ciudad-de-mexico">Ciudad de México</option>
                   <option value="Guadalajara">Guadalajara</option>
                </select>
                
-               <select name="type-contract" id="type-contract">
+               <select name="type-contract" id="filter-type-contract">
                   <option value="">Tipo de contrato</option>
                   <option value="temporal">Temporal</option>
                   <option value="por-proyecto">Por proyecto</option>
                   <option value="indefinido">Indefinido</option>
                </select>
 
-               <select name="experience-level" id="experience-level">
+               <select name="experience-level" id="filter-experience-level">
                   <option value="">Nivel de experiencia</option>
                   <option value="junior">Junior</option>
                   <option value="mid">Mid</option>

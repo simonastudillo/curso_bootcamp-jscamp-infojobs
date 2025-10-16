@@ -46,3 +46,27 @@ filter?.addEventListener('change', () => {
       mensaje.textContent = '';
    }
 });
+
+const searchInput = document.querySelector('#empleos-search-input');
+
+searchInput?.addEventListener('input', () => {
+   const searchTerm = searchInput.value.toLowerCase();
+   console.log(searchTerm);
+});
+
+searchInput?.addEventListener('blur', () => {
+   console.log('El input ha perdido el foco');
+});
+
+const searchForm = document.querySelector('#empleos-search-form');
+
+searchForm?.addEventListener('submit', (event) => {
+   event.preventDefault();
+});
+
+document.addEventListener('keydown', (event) => {
+   console.log(`Tecla presionada: ${event.key}`);
+   console.log(`Esta pulsada la tecla Control: ${event.ctrlKey}`);
+   console.log(`Esta pulsada la tecla Alt: ${event.altKey}`);
+   console.log(`Esta pulsada la tecla Shift: ${event.shiftKey}`);
+});
