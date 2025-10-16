@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- le indica al navegador que es un documento HTML5 -->
+<html lang="es">
+
+<head>
+   <!-- Van los metadatos, esta información no es visible en la web -->
+   <title>DevJobs - Empleos</title>
+   <meta charset="UTF-8" /><!-- Define la codificación de caracteres -->
+   <meta name="description" content="Listado con empleos y filtros para encontrar el trabajo de tu sueños.">
+   <link rel="stylesheet" href="./details.css" /><!-- Vincula el archivo CSS externo -->
+   <script type="module" src="./details.js"></script>
+</head>
+<body>
+   <header>
+      <h2>
+         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+           <polyline points="16 18 22 12 16 6"></polyline>
+           <polyline points="8 6 2 12 8 18"></polyline>
+         </svg>
+         DevJobs
+      </h2>
+      <nav>
+         <a href="./index.html">Inicio</a>
+         <a href="./empleos.html">Empleos</a>
+      </nav>
+      <div>
+         <a href="">Publicar empleo</a>
+         <a href="">Iniciar sesión</a>
+      </div>
+   </header>
+   
+   <main>
+      <section class="breadcrumb">
+         <nav>
+            <a href="./index.html">Inicio</a> &gt;
+            <a href="./empleos.html">Empleos</a> &gt;
+            <span>Desarrollador Frontend</span>
+         </nav>
+      </section>
+      <section class="details">
+         <header>
+            <div>
+               <h1>Ingeniero de Software</h1>
+               <small>Tech Solutions Inc. | Remoto</small>
+            </div>
+            <button class="button-apply-job">Aplicar</button>
+         </header>
+         <article>
+            <h2>Descripción del puesto</h2>
+            <p>Tech Solutions Inc. está buscando un Ingeniero de Software Senior altamente motivado y experimentado para unirse a nuestro equipo remoto. El candidato ideal tendrá una sólida formación en desarrollo de software, con experiencia en el diseño, desarrollo e implementación de soluciones de software escalables y de alto rendimiento. Como Ingeniero de Software Senior, usted será responsable de liderar proyectos de desarrollo, mentorizar a ingenieros junior y colaborar con equipos multifuncionales para entregar productos de software de alta calidad</p>
+         </article>
+         <article>
+            <h2>Responsabilidades</h2>
+            <ul>
+               <li>Diseñar, desarrollar y mantener aplicaciones web utilizando tecnologías modernas.</li>
+               <li>Colaborar con equipos de producto y diseño para definir y entregar nuevas características.</li>
+               <li>Escribir código limpio, eficiente y bien documentado.</li>
+               <li>Realizar revisiones de código y proporcionar retroalimentación constructiva a los miembros del equipo.</li>
+            </ul>
+         </article>
+         <article>
+            <h2>Requisitos</h2>
+            <ul>
+               <li>Licenciatura en Informática o campo relacionado.</li>
+               <li>Mínimo de 5 años de experiencia en desarrollo de software.</li>
+               <li>Experiencia con frameworks de JavaScript (por ejemplo, React, Angular, Vue.js).</li>
+               <li>Familiaridad con metodologías ágiles y herramientas de control de versiones (por ejemplo, Git).</li>
+            </ul>
+         </article>
+         <article>
+            <h2>Acerca de la empresa</h2>
+            <p>Tech Solutions Inc. es una empresa de tecnología innovadora que se centra en la creación de soluciones de software de vanguardia para diversas industrias. Estamos comprometidos con el fomento de un entorno de trabajo colaborativo e inclusivo donde cada empleado pueda prosperar y crecer profesionalmente. Ofrecemos salarios competitivos, beneficios integrales y oportunidades de desarrollo profesional continuo</p>
+         </article>
+         <footer>
+            <button class="button-apply-job">Aplicar ahora</button>
+         </footer>
+      </section>
+   </main>
+
+   <footer>
+      <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+      <nav>
+         <a href="">Términos de servicio</a>
+         <a href="">Política de privacidad</a>
+         <a href="">Contacto</a>
+      </nav>
+   </footer>
+</body>
+
+</html>
