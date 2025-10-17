@@ -1,0 +1,127 @@
+
+// const boton = document.querySelector('.button-apply-job');
+
+// if ( boton !== null) {
+   // boton.addEventListener('click', () => {
+   //    boton.textContent = '¡Aplicado!';
+   //    boton.classList.add('is-applied');
+   //    boton.disabled = true;
+   // });
+// }
+
+// const botones = document.querySelectorAll('.button-apply-job');
+
+// botones.forEach( boton => {
+
+//    boton.addEventListener('click', () => {
+//       boton.textContent = '¡Aplicado!';
+//       boton.classList.add('is-applied');
+//       boton.disabled = true;
+//    });
+
+// });
+
+// const filter = document.querySelector('#filter-technology');
+// const mensaje = document.querySelector('#filter-selected-value');
+
+// filter?.addEventListener('change', () => {
+//    const selectedValue = filter.value;
+
+//    if  ( selectedValue ) {
+//       mensaje.textContent = `Filtrando por tecnología: ${selectedValue}`;
+//    } else {
+//       mensaje.textContent = '';
+//    }
+// });
+
+// const searchInput = document.querySelector('#empleos-search-input');
+
+// searchInput?.addEventListener('input', () => {
+//    const searchTerm = searchInput.value.toLowerCase();
+//    console.log(searchTerm);
+// });
+
+// searchInput?.addEventListener('blur', () => {
+//    console.log('El input ha perdido el foco');
+// });
+
+// const searchForm = document.querySelector('#empleos-search-form');
+
+// searchForm?.addEventListener('submit', (event) => {
+//    event.preventDefault();
+// });
+
+// document.addEventListener('keydown', (event) => {
+//    console.log(`Tecla presionada: ${event.key}`);
+//    console.log(`Esta pulsada la tecla Control: ${event.ctrlKey}`);
+//    console.log(`Esta pulsada la tecla Alt: ${event.altKey}`);
+//    console.log(`Esta pulsada la tecla Shift: ${event.shiftKey}`);
+// });
+
+// Delegación de eventos
+const jobsListingSection = document.querySelector('.jobs-listing');
+
+jobsListingSection?.addEventListener('click', (event) => {
+   const element = event.target;
+
+   if ( element.classList.contains('button-apply-job') ) {
+      element.textContent = '¡Aplicado!';
+      element.classList.add('is-applied');
+      element.disabled = true;
+   }
+});
+
+const filter = document.querySelector('#filter-location');
+const mensaje = document.querySelector('#filter-selected-value');
+
+filter?.addEventListener('change', () => {
+   const selectedValue = filter.value;
+   const jobs = document.querySelectorAll('.job-listing-card');
+
+   if  ( selectedValue ) {
+      mensaje.textContent = `Filtrando por tecnología: ${selectedValue}`;
+   } else {
+      mensaje.textContent = '';
+   }
+
+   jobs.forEach( job => {
+      const jobModalidad = job.dataset.modalidad;
+      const isShown = selectedValue === '' || jobModalidad === selectedValue;
+      // const jobModalidad = job.getAttribute('data-modalidad');
+      job.classList.toggle('is-hidden', !isShown);
+
+      // if ( selectedValue === '' || jobModalidad === selectedValue ) {
+      //    job.classList.remove('is-hidden');
+      // } else {
+      //    job.classList.add('is-hidden');
+      // }
+
+   });
+});
+
+// console.log('Antes de la llamada a fetch');
+fetch("./data.json")
+   .then(response => response.json())
+   .then(jobs => {
+      jobs.forEach( job => {
+         const article = document.createElement('article');
+         article.classList.add('job-listing-card');
+         article.dataset.modalidad = job.data?.ubicacion;
+         article.dataset.technology = job.data?.technology;
+         article.dataset.nivel = job.data?.nivel;
+
+         article.innerHTML = `
+            <div>
+               <h3>${job.titulo}</h3>
+               <small>${job.empresa} | ${job.ubicacion}</small>
+               <p>${job.descripcion}</p>
+            </div>
+            <button class="button-apply-job">Aplicar</button>
+         `;
+         jobsListingSection.appendChild(article);
+      });
+   })
+   .catch(error => {
+      console.error("Error al cargar el archivo JSON:", error);
+   });
+// console.log('Después de la llamada a fetch');

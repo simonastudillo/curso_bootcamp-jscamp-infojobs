@@ -1,0 +1,126 @@
+<!DOCTYPE html> <!-- le indica al navegador que es un documento HTML5 -->
+<html lang="es">
+
+<head>
+   <!-- Van los metadatos, esta información no es visible en la web -->
+   <title>DevJobs - Empleos</title>
+   <meta charset="UTF-8" /><!-- Define la codificación de caracteres -->
+   <meta name="description" content="Listado con empleos y filtros para encontrar el trabajo de tu sueños.">
+   <link rel="stylesheet" href="./styles.css" /><!-- Vincula el archivo CSS externo -->
+   <script type="module" src="./script.js"></script>
+</head>
+<body>
+   <header>
+      <h2>
+         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+           <polyline points="16 18 22 12 16 6"></polyline>
+           <polyline points="8 6 2 12 8 18"></polyline>
+         </svg>
+         DevJobs
+      </h2>
+      <nav>
+         <a href="./index.html">Inicio</a>
+         <a href="./empleos.html">Empleos</a>
+      </nav>
+      <div>
+         <a href="">Publicar empleo</a>
+         <a href="">Iniciar sesión</a>
+      </div>
+   </header>
+
+   <main>
+      <section class="jobs-search">
+         <h1>Encuentra tu próximo trabajo</h1>
+         <p>Explora miles de oportunidades en el sector tecnológico.</p>
+
+         <form role="search" id="empleos-search-form">
+            <div class="search-bar">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                  <path d="M21 21l-6 -6" />
+               </svg>
+               <input name="empleos-search-input" id="empleos-search-input" type="text" placeholder="Buscar trabajos empleos o habilidades" />
+            </div>
+
+            <div class="search-filters">
+               <select name="technology" id="filter-technology">
+                  <option value="">Tecnología</option>
+                  <optgroup label="Tecnologías populares">
+                     <option value="JavaScript">JavaScript</option>
+                     <option value="Python">Python</option>
+                     <option value="React">React</option>
+                  </optgroup>
+                  <option value="Java">Java</option>
+                  <hr>
+                  <option value="C#">C#</option>
+                  <option value="Ruby">Ruby</option>
+                  <option value="PHP">PHP</option>
+               </select>
+               <select name="location" id="filter-location">
+                  <option value="">Ubicación</option>
+                  <option value="remoto">Remoto</option>
+                  <option value="ciudad-de-mexico">Ciudad de México</option>
+                  <option value="Guadalajara">Guadalajara</option>
+               </select>
+               
+               <select name="type-contract" id="filter-type-contract">
+                  <option value="">Tipo de contrato</option>
+                  <option value="temporal">Temporal</option>
+                  <option value="por-proyecto">Por proyecto</option>
+                  <option value="indefinido">Indefinido</option>
+               </select>
+
+               <select name="experience-level" id="filter-experience-level">
+                  <option value="">Nivel de experiencia</option>
+                  <option value="junior">Junior</option>
+                  <option value="mid">Mid</option>
+                  <option value="senior">Senior</option>
+                  <option value="lead">Lead</option>
+               </select>
+            </div>
+
+            <span id="filter-selected-value"></span>
+         </form>
+      </section>
+      <h2>Resultados de búsqueda</h2>
+      <section class="jobs-listing">
+         <!-- Aquí se renderizan los empleos desde script.js -->
+      </section>
+      <nav class="pagination">
+        <a href="#">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 6l-6 6l6 6" />
+          </svg>
+        </a>
+        <a class="is-active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 6l6 6l-6 6" />
+          </svg>
+        </a>
+      </nav>
+   </main>
+
+   <footer>
+      <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+      <nav>
+         <a href="">Términos de servicio</a>
+         <a href="">Política de privacidad</a>
+         <a href="">Contacto</a>
+      </nav>
+   </footer>
+</body>
+
+</html>
