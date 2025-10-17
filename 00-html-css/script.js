@@ -86,13 +86,15 @@ filter?.addEventListener('change', () => {
 
    jobs.forEach( job => {
       const jobModalidad = job.dataset.modalidad;
+      const isShown = selectedValue === '' || jobModalidad === selectedValue;
       // const jobModalidad = job.getAttribute('data-modalidad');
-      
-      if ( selectedValue === '' || jobModalidad === selectedValue ) {
-         job.style.display = 'flex';
-      } else {
-         job.style.display = 'none';
-      }
+      job.classList.toggle('is-hidden', !isShown);
+
+      // if ( selectedValue === '' || jobModalidad === selectedValue ) {
+      //    job.classList.remove('is-hidden');
+      // } else {
+      //    job.classList.add('is-hidden');
+      // }
 
    });
 });

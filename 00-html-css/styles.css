@@ -364,7 +364,7 @@ article {
    border: 1px solid rgba(255, 255, 255, 0.3);
    border-radius: 1rem;
 
-   article {
+   .job-listing-card {
       background: none;
       box-shadow: none;
       border-radius: 0px;
@@ -385,6 +385,10 @@ article {
 
       &:last-child {
          border-bottom: none;
+      }
+
+      &.is-hidden{
+         display: none;
       }
    }
 }
