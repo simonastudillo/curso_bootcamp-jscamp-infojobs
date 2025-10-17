@@ -73,10 +73,10 @@ jobsListingSection?.addEventListener('click', (event) => {
 
 const filter = document.querySelector('#filter-location');
 const mensaje = document.querySelector('#filter-selected-value');
-const jobs = document.querySelectorAll('.job-listing-card');
 
 filter?.addEventListener('change', () => {
    const selectedValue = filter.value;
+   const jobs = document.querySelectorAll('.job-listing-card');
 
    if  ( selectedValue ) {
       mensaje.textContent = `Filtrando por tecnología: ${selectedValue}`;
@@ -99,14 +99,29 @@ filter?.addEventListener('change', () => {
    });
 });
 
-console.log('Antes de la llamada a fetch');
+// console.log('Antes de la llamada a fetch');
 fetch("./data.json")
    .then(response => response.json())
-   .then(data => {
-      console.log("Archivo JSON cargado correctamente:");
-      console.log(data);
+   .then(jobs => {
+      jobs.forEach( job => {
+         const article = document.createElement('article');
+         article.classList.add('job-listing-card');
+         article.dataset.modalidad = job.data?.ubicacion;
+         article.dataset.technology = job.data?.technology;
+         article.dataset.nivel = job.data?.nivel;
+
+         article.innerHTML = `
+            <div>
+               <h3>${job.titulo}</h3>
+               <small>${job.empresa} | ${job.ubicacion}</small>
+               <p>${job.descripcion}</p>
+            </div>
+            <button class="button-apply-job">Aplicar</button>
+         `;
+         jobsListingSection.appendChild(article);
+      });
    })
    .catch(error => {
       console.error("Error al cargar el archivo JSON:", error);
    });
-console.log('Después de la llamada a fetch');
+// console.log('Después de la llamada a fetch');
