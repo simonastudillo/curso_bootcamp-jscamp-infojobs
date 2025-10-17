@@ -98,3 +98,15 @@ filter?.addEventListener('change', () => {
 
    });
 });
+
+console.log('Antes de la llamada a fetch');
+fetch("./data.json")
+   .then(response => response.json())
+   .then(data => {
+      console.log("Archivo JSON cargado correctamente:");
+      console.log(data);
+   })
+   .catch(error => {
+      console.error("Error al cargar el archivo JSON:", error);
+   });
+console.log('Después de la llamada a fetch');
