@@ -5,17 +5,27 @@ class DevJobsAvatar extends HTMLElement {
       this.attachShadow({ mode: 'open' }); // Adjuntamos un Shadow DOM abierto para que no haya conflictos de estilos
    }
 
+   createUrl(service, username) {
+      return `https://unavatar.io/${service}/${username}`;
+   }
+
    render() {
+      const username = this.getAttribute('username') ?? 'midudev';
+      const service = this.getAttribute('service') ?? 'github';
+      const size = this.getAttribute('size') ?? '40';
+
+      const url = this.createUrl(service, username);
+
       this.shadowRoot.innerHTML = `
       <style>
          img.avatar {
-            width: 40px;
-            height: 40px;
+            width: ${size}px;
+            height: ${size}px;
             border-radius: 50%;
          }
       </style>
          <img
-            src="https://avatars.githubusercontent.com/u/1561955"
+            src="${url}"
             alt="DevJobs Avatar"
             class="avatar"
          />
