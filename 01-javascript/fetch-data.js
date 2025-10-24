@@ -13,6 +13,8 @@ fetch("./data.json")
 
 const buildJobsList = (jobs) => {
    const jobsSection = document.querySelector('.jobs-listing');
+   const countJobsListing = document.getElementById('count-jobs-listing');
+   countJobsListing.textContent = `Mostrando ${jobs.length} de ${jobsData.length} ofertas`;
    jobsSection.innerHTML = '';
    jobs.forEach( job => {
       const article = document.createElement('article');
