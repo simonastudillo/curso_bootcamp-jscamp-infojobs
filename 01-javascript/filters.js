@@ -1,3 +1,5 @@
+import {generatePageNumbers} from './fetch-data.js';
+
 const formEmpleo = document.querySelector('#empleos-search-form');
 
 formEmpleo?.addEventListener('input', (event) => {
@@ -22,13 +24,14 @@ formEmpleo?.addEventListener('input', (event) => {
       const isShown = 
          (inputSearchJobs === '' || jobTitle.includes(inputSearchJobs))
          && (filterLocation === '' || jobModalidad === filterLocation)
-         && (filterTecnologia === '' || tieneAlgunaTech)
+         && (selectedTecnologia.length === 0 || tieneAlgunaTech)
          && (filterExperiencia === '' || jobNivel === filterExperiencia);
 
       job.classList.toggle('is-hidden', !isShown);
       if (isShown) countVisibleJobs++;
    });
    countJobsListing.textContent = `Mostrando ${countVisibleJobs} de ${jobs.length} ofertas`;
+   generatePageNumbers(countVisibleJobs);
 });
 
 
