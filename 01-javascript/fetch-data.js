@@ -9,8 +9,8 @@ fetch("./data.json")
       jobs.forEach( job => {
          const article = document.createElement('article');
          article.classList.add('job-listing-card');
-         article.dataset.modalidad = job.data?.ubicacion;
-         article.dataset.technology = job.data?.technology;
+         article.dataset.modalidad = job.data?.modalidad;
+         article.dataset.technology = job.data?.technology.toString();
          article.dataset.nivel = job.data?.nivel;
          article.dataset.title = job.titulo.toLowerCase();
 
