@@ -7,7 +7,7 @@
    <meta charset="UTF-8" /><!-- Define la codificación de caracteres -->
    <meta name="description" content="Listado con empleos y filtros para encontrar el trabajo de tu sueños.">
    <link rel="stylesheet" href="./styles.css" /><!-- Vincula el archivo CSS externo -->
-   <script type="module" src="./script.js"></script>
+   <script type="module" src="./main.js"></script>
 </head>
 <body>
    <header>
@@ -23,8 +23,13 @@
          <a href="./empleos.html">Empleos</a>
       </nav>
       <div>
-         <a href="">Publicar empleo</a>
-         <a href="">Iniciar sesión</a>
+         <!-- <a href="">Publicar empleo</a>
+         <a href="">Iniciar sesión</a> -->
+         <devjobs-avatar
+            service="x"
+            username="midudev"
+            size="40"
+         ></devjobs-avatar>
       </div>
    </header>
 
@@ -46,13 +51,11 @@
             </div>
 
             <div class="search-filters">
-               <select name="technology" id="filter-technology">
+               <select name="technology" id="filter-technology" multiple>
                   <option value="">Tecnología</option>
-                  <optgroup label="Tecnologías populares">
-                     <option value="JavaScript">JavaScript</option>
-                     <option value="Python">Python</option>
-                     <option value="React">React</option>
-                  </optgroup>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="Python">Python</option>
+                  <option value="React">React</option>
                   <option value="Java">Java</option>
                   <hr>
                   <option value="C#">C#</option>
@@ -64,6 +67,8 @@
                   <option value="remoto">Remoto</option>
                   <option value="ciudad-de-mexico">Ciudad de México</option>
                   <option value="Guadalajara">Guadalajara</option>
+                  <option value="bogotá">Bogotá</option>
+                  <option value="valencia">Valencia</option>
                </select>
                
                <select name="type-contract" id="filter-type-contract">
@@ -85,7 +90,7 @@
             <span id="filter-selected-value"></span>
          </form>
       </section>
-      <h2>Resultados de búsqueda</h2>
+      <h2>Resultados de búsqueda <small id="count-jobs-listing"></small></h2>
       <section class="jobs-listing">
          <!-- Aquí se renderizan los empleos desde script.js -->
       </section>
